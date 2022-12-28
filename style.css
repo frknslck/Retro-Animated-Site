@@ -4,12 +4,8 @@
     box-sizing: border-box;
 }
 
-.main {
-	position: relative;
+body{
 	overflow: hidden;
-	height: 100vh;
-	color: #a3c;
-	background-color: #000;
 }
 
 .top {
@@ -216,6 +212,18 @@
     text-align: center;
 } */
 
+.top-sun img{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    font-size: 1.25vw;
+    color: white;
+    text-align: center;
+	height: 200px;
+	animation: ananas 10s linear infinite;
+}
+
+
 .top-mount{
     position: absolute;
     display: flex;
@@ -240,6 +248,107 @@
 	z-index: 1;
 }
 
+.palm-left-1 img, 
+.palm-left-2 img,
+.palm-left-3 img, 
+.palm-left-4 img {
+	height: 120px;
+}
+
+.palm-right-1 img, 
+.palm-right-2 img,
+.palm-right-3 img, 
+.palm-right-4 img {
+	height: 120px;
+	transform: scaleX(-1);
+}
+
+.palm-left-1{
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 30%;
+	animation: left-move-1 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards infinite;
+	perspective: 1000px;
+	transform-origin: top center;
+}
+
+.palm-left-2{
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 20%;
+	animation: left-move-2 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards infinite;
+	perspective: 1000px;
+	animation-delay: 1s;
+	transform-origin: top center;
+}
+
+.palm-left-3{
+	position: absolute;
+	z-index: 2;
+	top: 45%;
+	left: 8%;
+	animation: left-move-3 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards infinite;
+	animation-delay: 2s;
+	perspective: 1000px;
+	transform-origin: top center;
+}
+
+.palm-left-4{
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 40%;
+	animation: left-move-4 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards infinite;
+	perspective: 1000px;
+	transform-origin: top center;
+}
+
+.palm-right-1{
+    position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 60%;
+	animation: right-move-1 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards infinite;
+	perspective: 1000px;
+	transform-origin: top center;
+}
+
+.palm-right-2{
+    position: absolute;
+    display: flex;
+	z-index: 2;
+	top: 50%;
+	left: 75%;
+	animation: right-move-2 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards infinite;
+	animation-delay: 1s;
+	perspective: 1000px;
+	transform-origin: top center;
+}
+
+.palm-right-3{
+    position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 85%;
+	animation: right-move-3 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards infinite;
+	perspective: 1000px;
+	transform-origin: top center;
+}
+
+.palm-right-4{
+    position: absolute;
+	z-index: 2;
+	top: 45%;
+	left: 95%;
+	animation: right-move-4 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards infinite;
+	animation-delay: 2s;
+	perspective: 1000px;
+	transform-origin: top center;
+}
+
+
 .car{
     position: absolute;
     z-index: 1;
@@ -250,6 +359,7 @@
     right: 0;
     top: 10%;
     animation: car-move 3s linear infinite;
+	z-index: 2;
 }
 
 .alt-linesct {
@@ -310,6 +420,89 @@
 	width: 100%;
 	height: 100%;
 	background-image: linear-gradient( #000 0%, transparent );
+	z-index: 1;
+}
+
+@keyframes ananas{
+	0% {
+        transform: rotate(0deg);
+	}
+    100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes left-move-1 {
+    0% {
+		transform: translateY(30%) translateX(70%) scale(0);
+	}
+	100% {
+		transform: translateY(70%) translateX(-1000%) scale(2);
+	}
+}
+
+@keyframes left-move-2 {
+    0% {
+		transform: translateY(30%) translateX(15%) scale(0);
+	}
+	100% {
+		transform: translateY(70%) translateX(-1200%) scale(2);
+	}
+}
+
+@keyframes left-move-3 {
+    0% {
+		transform: translateY(70%) translateX(100%) scale(0);
+	}
+	100% {
+		transform: translateY(70%) translateX(-2000%) scale(2);
+	}
+}
+
+@keyframes left-move-4 {
+    0% {
+		transform: translateY(25%) translateX(0%) scale(0);
+	}
+	100% {
+		transform: translateY(70%) translateX(-700%) scale(2);
+	}
+}
+
+
+@keyframes right-move-1 {
+	0% {
+		transform: translateY(30%) translateX(-150%) scale(0);
+	}
+	100% {
+		transform: translateY(70%) translateX(700%) scale(2);
+	}
+}
+
+@keyframes right-move-2 {
+	0% {
+		transform: translateY(30%) translateX(-150%) scale(0);
+	}
+	100% {
+		transform: translateY(70%) translateX(1500%) scale(2);
+	}
+}
+
+@keyframes right-move-3 {
+	0% {
+		transform: translateY(30%) translateX(-150%) scale(0);
+	}
+	100% {
+		transform: translateY(70%) translateX(1000%) scale(2);
+	}
+}
+
+@keyframes right-move-4 {
+	0% {
+		transform: translateY(70%) translateX(-150%) scale(0);
+	}
+	100% {
+		transform: translateY(70%) translateX(2000%) scale(2);
+	}
 }
 
 @keyframes car-move {
