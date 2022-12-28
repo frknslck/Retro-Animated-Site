@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	color: #a3c;
+	background-color: #000;
+}
+
+.top {
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 100vw;
+	height: 55vh;
+    top: 0;
+    background: linear-gradient(0deg, rgba(159,30,130,1) 0%, rgba(16,6,41,1) 100%);
+}
+
+.top-sunct {
+	position: relative;
+	width: 35vw;
+	margin-bottom: -15%;
+}
+
+.top-sun {
+	padding-top: 100%;
+	border-radius: 50%;
+	background-image: linear-gradient( #fcdf11, #ff623f, #fe2085 50% );
+	box-shadow: 0 0 160px 80px #ac3442;
+}
+
+/* .top-sun p{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25vw;
+    color: white;
+    text-align: center;
+} */
+
+.top-mount{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+	width: 35vw;
+	bottom: 40%;
+}
+
+.top-mount img{
+    width: 50vw;
+}
+
+.alt {
+	position: absolute;
+	overflow: hidden;
+	width: 100vw;
+	height: 45vh;
+	bottom: 0;
+	border-top: 6px solid #a3c;
+	background-color: #000;
+}
+
+.car{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    left: 0;
+    right: 0;
+    top: 10%;
+    animation: car-move 3s linear infinite;
+}
+
+.alt-linesct {
+	height: 100%;
+	perspective: 1000px;
+	perspective-origin: center top;
+}
+
+.alt-lines {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-origin: top center;
+	animation: .3s linear infinite alt-lines-anim;
+}
+
+.alt-shutdown #alt-lines {
+	animation-duration: 5s;
+}
+
+.alt-hlines, .alt-vlines {
+	position: absolute;
+	left: calc( ( 900% - 100% ) / -2 );
+	width: 900%;
+	height: 500%;
+}
+
+.alt-vlines {
+	display: flex;
+	justify-content: center;
+}
+
+.alt-hline, .alt-vline {
+	width: 100%;
+	height: 100%;
+	background-color: #a3c;
+}
+
+.alt-hline { 
+    height: 3px; 
+}
+
+.alt-vline { 
+    width: 3px; 
+}
+
+.alt-hline + .alt-hline { 
+    margin-top: 100px; 
+}
+
+.alt-vline + .alt-vline { 
+    margin-left: 50px; 
+}
+
+.alt-shadow {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient( #000 0%, transparent );
+}
+
+@keyframes car-move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(-10px, -5px);
+    }
+    75% {
+        transform: translate(10px, -5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes alt-lines-anim {
+	from { transform: rotateX( 85deg ) translateY( 0 ); }
+	to { transform: rotateX( 85deg ) translateY( 100px ); }
+}
