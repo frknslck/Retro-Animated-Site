@@ -252,14 +252,14 @@ body{
 .palm-left-2 img,
 .palm-left-3 img, 
 .palm-left-4 img {
-	height: 120px;
+	height: 150px;
 }
 
 .palm-right-1 img, 
 .palm-right-2 img,
 .palm-right-3 img, 
 .palm-right-4 img {
-	height: 120px;
+	height: 150px;
 	transform: scaleX(-1);
 }
 
